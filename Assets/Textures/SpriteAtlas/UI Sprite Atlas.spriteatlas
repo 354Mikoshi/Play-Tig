@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 21300000, guid: 7d29c1f4bd34fe5419e83075fa7451f3, type: 3}
+    - {fileID: 21300000, guid: 3192f76107e9ce643801b739ff801153, type: 3}
+    - {fileID: 21300000, guid: 1dde428ea03a0924ca55b57bc56bc008, type: 3}
+    - {fileID: 21300000, guid: 8900c917705d42b45853553af9fd8ab6, type: 3}
+    - {fileID: 21300000, guid: 1ee3834c7c4d2324e9c53d9a647a709d, type: 3}
+    - {fileID: 21300000, guid: 8033235ab70888d4baae3c538a5c7b0f, type: 3}
+    - {fileID: 21300000, guid: 19a54ccaff011a04891e4bd924423b03, type: 3}
+    - {fileID: 21300000, guid: 7000ad464d7f09e4d84ad9ecb8bc7f72, type: 3}
+    - {fileID: 21300000, guid: 1513a19ea27b3a942b76fcae68af9056, type: 3}
+    - {fileID: 21300000, guid: 286e415b43e14794e9bbaa57e602d1eb, type: 3}
+    - {fileID: 21300000, guid: 7c736adb7e878f643932d0dc5625e334, type: 3}
+    - {fileID: 21300000, guid: 1036a500772233241a15cc199e98b9a3, type: 3}
+    - {fileID: 21300000, guid: 4834c9937981b5847bbfaf328722b8ca, type: 3}
+    - {fileID: 21300000, guid: 1e86dfbd9da3733489736ce640d90aa3, type: 3}
+    - {fileID: 21300000, guid: 3588276cd6b42fd42b78a7a244454873, type: 3}
+    - {fileID: 21300000, guid: 06165a627814361429741ebb2ccd4e4d, type: 3}
+    - {fileID: 21300000, guid: 6630ffe301a35c649b2df46c94dd4bb8, type: 3}
+    totalSpriteSurfaceArea: 3563862
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 1036a500772233241a15cc199e98b9a3, type: 3}
+  - {fileID: 21300000, guid: 3192f76107e9ce643801b739ff801153, type: 3}
+  - {fileID: 21300000, guid: 06165a627814361429741ebb2ccd4e4d, type: 3}
+  - {fileID: 21300000, guid: 4834c9937981b5847bbfaf328722b8ca, type: 3}
+  - {fileID: 21300000, guid: 6630ffe301a35c649b2df46c94dd4bb8, type: 3}
+  - {fileID: 21300000, guid: 7d29c1f4bd34fe5419e83075fa7451f3, type: 3}
+  - {fileID: 21300000, guid: 7000ad464d7f09e4d84ad9ecb8bc7f72, type: 3}
+  - {fileID: 21300000, guid: 8900c917705d42b45853553af9fd8ab6, type: 3}
+  - {fileID: 21300000, guid: 8033235ab70888d4baae3c538a5c7b0f, type: 3}
+  - {fileID: 21300000, guid: 19a54ccaff011a04891e4bd924423b03, type: 3}
+  - {fileID: 21300000, guid: 286e415b43e14794e9bbaa57e602d1eb, type: 3}
+  - {fileID: 21300000, guid: 7c736adb7e878f643932d0dc5625e334, type: 3}
+  - {fileID: 21300000, guid: 1ee3834c7c4d2324e9c53d9a647a709d, type: 3}
+  - {fileID: 21300000, guid: 3588276cd6b42fd42b78a7a244454873, type: 3}
+  - {fileID: 21300000, guid: 1e86dfbd9da3733489736ce640d90aa3, type: 3}
+  - {fileID: 21300000, guid: 1dde428ea03a0924ca55b57bc56bc008, type: 3}
+  - {fileID: 21300000, guid: 1513a19ea27b3a942b76fcae68af9056, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CourseSelectionButton_Mask
+  - item_storage
+  - bridge_mark
+  - ogre_mark
+  - circle
+  - display meter panel
+  - panel
+  - frame
+  - Underline
+  - belt
+  - Fence
+  - player_mark
+  - CollectButtonBackground
+  - impassable_mark
+  - stair_mark
+  - BackArrow
+  - bridge
+  m_Tag: UI Sprite Atlas
+  m_IsVariant: 0

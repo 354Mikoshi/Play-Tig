@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Screen UI Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 21300000, guid: 7000ad464d7f09e4d84ad9ecb8bc7f72, type: 3}
+    - {fileID: 21300000, guid: ff785267adae5aa459986b118be026a8, type: 3}
+    - {fileID: 21300000, guid: a3c42a07d649d4e438a1780967f8a9d6, type: 3}
+    - {fileID: 21300000, guid: 909f45f1e92b52141ab4753181d71b11, type: 3}
+    - {fileID: 21300000, guid: 5cc170d2e0e469146a51c76bd3341a0d, type: 3}
+    - {fileID: 21300000, guid: c24073359d7c54d408437dba53e9cdfe, type: 3}
+    - {fileID: 21300000, guid: 38fb13168792d824cb4118c2f00e4308, type: 3}
+    - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 21300000, guid: ab0bdf1560e8cbd41a1c8d98547c01a5, type: 3}
+    - {fileID: 21300000, guid: 564386e03d6b1fb49a13dcc4c2a76bcf, type: 3}
+    - {fileID: 21300000, guid: 7e416a6f32ef5d14cb7ea86720917954, type: 3}
+    - {fileID: 21300000, guid: f44c467c0d0f9d04ea44c028c0905a9d, type: 3}
+    - {fileID: 21300000, guid: b23755ef0db673c4ab53a57f56aa298e, type: 3}
+    - {fileID: 21300000, guid: 0a6123526508ddc488b29539c409dde8, type: 3}
+    - {fileID: 21300000, guid: 96e8f81430cd2d24bb3fa8bd9610a3e3, type: 3}
+    - {fileID: 21300000, guid: 9578d02513322f840935e4c5ee780313, type: 3}
+    - {fileID: 21300000, guid: 8e59cf342d5bd0c48ae3ee8c4f3dfc5b, type: 3}
+    - {fileID: 21300000, guid: 1348943d738951b489c40251a094880d, type: 3}
+    - {fileID: 21300000, guid: 189794d17458eb24490e47a158ef9f78, type: 3}
+    - {fileID: 21300000, guid: d39aedb9165fe40599a0db1a32e4c9f0, type: 3}
+    - {fileID: 21300000, guid: a3b152bcdd2c5534ba712036caee9136, type: 3}
+    - {fileID: 21300000, guid: 8735005daa8541842b18406bfbe47e4a, type: 3}
+    - {fileID: 21300000, guid: ba1721b788cb29a41a92d0b40302374c, type: 3}
+    - {fileID: 21300000, guid: c2cf21b9c36a8bb42b3c971510dee615, type: 3}
+    - {fileID: 21300000, guid: 8d7dc75163aba5542a5a8552af2deeac, type: 3}
+    - {fileID: 21300000, guid: 1ec3e799a7919084d995380825961297, type: 3}
+    - {fileID: 21300000, guid: 7c736adb7e878f643932d0dc5625e334, type: 3}
+    - {fileID: 21300000, guid: 3588276cd6b42fd42b78a7a244454873, type: 3}
+    - {fileID: 21300000, guid: 06165a627814361429741ebb2ccd4e4d, type: 3}
+    - {fileID: 21300000, guid: 4834c9937981b5847bbfaf328722b8ca, type: 3}
+    - {fileID: 21300000, guid: 1a46685bb592c9048bd0d2832a89f772, type: 3}
+    - {fileID: 21300000, guid: ef09c3bf8a7df934f9abc9132a862bde, type: 3}
+    totalSpriteSurfaceArea: 4019206
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: 564386e03d6b1fb49a13dcc4c2a76bcf, type: 3}
+  - {fileID: 21300000, guid: 8d7dc75163aba5542a5a8552af2deeac, type: 3}
+  - {fileID: 21300000, guid: 189794d17458eb24490e47a158ef9f78, type: 3}
+  - {fileID: 21300000, guid: 909f45f1e92b52141ab4753181d71b11, type: 3}
+  - {fileID: 21300000, guid: 0a6123526508ddc488b29539c409dde8, type: 3}
+  - {fileID: 21300000, guid: 06165a627814361429741ebb2ccd4e4d, type: 3}
+  - {fileID: 21300000, guid: 5cc170d2e0e469146a51c76bd3341a0d, type: 3}
+  - {fileID: 21300000, guid: 4834c9937981b5847bbfaf328722b8ca, type: 3}
+  - {fileID: 21300000, guid: 96e8f81430cd2d24bb3fa8bd9610a3e3, type: 3}
+  - {fileID: 21300000, guid: 8e59cf342d5bd0c48ae3ee8c4f3dfc5b, type: 3}
+  - {fileID: 21300000, guid: ab0bdf1560e8cbd41a1c8d98547c01a5, type: 3}
+  - {fileID: 21300000, guid: 9578d02513322f840935e4c5ee780313, type: 3}
+  - {fileID: 21300000, guid: c24073359d7c54d408437dba53e9cdfe, type: 3}
+  - {fileID: 21300000, guid: 38fb13168792d824cb4118c2f00e4308, type: 3}
+  - {fileID: 21300000, guid: 7000ad464d7f09e4d84ad9ecb8bc7f72, type: 3}
+  - {fileID: 21300000, guid: a3c42a07d649d4e438a1780967f8a9d6, type: 3}
+  - {fileID: 21300000, guid: ff785267adae5aa459986b118be026a8, type: 3}
+  - {fileID: 21300000, guid: ba1721b788cb29a41a92d0b40302374c, type: 3}
+  - {fileID: 21300000, guid: 1ec3e799a7919084d995380825961297, type: 3}
+  - {fileID: 21300000, guid: c2cf21b9c36a8bb42b3c971510dee615, type: 3}
+  - {fileID: 21300000, guid: d39aedb9165fe40599a0db1a32e4c9f0, type: 3}
+  - {fileID: 21300000, guid: 1a46685bb592c9048bd0d2832a89f772, type: 3}
+  - {fileID: 21300000, guid: 7c736adb7e878f643932d0dc5625e334, type: 3}
+  - {fileID: 21300000, guid: 3588276cd6b42fd42b78a7a244454873, type: 3}
+  - {fileID: 21300000, guid: f44c467c0d0f9d04ea44c028c0905a9d, type: 3}
+  - {fileID: 21300000, guid: a3b152bcdd2c5534ba712036caee9136, type: 3}
+  - {fileID: 21300000, guid: 1348943d738951b489c40251a094880d, type: 3}
+  - {fileID: 21300000, guid: 8735005daa8541842b18406bfbe47e4a, type: 3}
+  - {fileID: 21300000, guid: 7e416a6f32ef5d14cb7ea86720917954, type: 3}
+  - {fileID: 21300000, guid: ef09c3bf8a7df934f9abc9132a862bde, type: 3}
+  - {fileID: 21300000, guid: b23755ef0db673c4ab53a57f56aa298e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Background
+  - bridge1
+  - TitleBackground
+  - minimap
+  - CourseSelectionButton
+  - wall2
+  - bridge_mark
+  - batsu
+  - ogre_mark
+  - wall3
+  - collect2
+  - item storage
+  - collect1
+  - CheckMark_Image
+  - door
+  - panel
+  - medal
+  - GoButtonBackground
+  - green ogre
+  - trophy panel
+  - red ogre
+  - target_4_spritesheet_0
+  - TutorialButton
+  - player_mark
+  - impassable_mark
+  - bridge3
+  - white ogre
+  - distance
+  - blue ogre
+  - bridge2
+  - Twitter Icon
+  - wall1
+  m_Tag: Screen UI Sprite Atlas
+  m_IsVariant: 0
