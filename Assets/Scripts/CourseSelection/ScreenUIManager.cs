@@ -28,7 +28,7 @@ public class ScreenUIManager : MonoBehaviour
     public RectTransform tutorialContentRectTransform; //ボタンを配置するための長方形領域
     public Text tutorialTitleText;
     public GameObject rulePanel, howToMovePanel, stairPanel, itemStoragePanel, bridgePanel, wallPanel,
-        collectPanel, distanceDisplayPanel, minimapPanel, ogrePanel;
+        collectPanel, distanceDisplayPanel/*, minimapPanel*/, ogrePanel;
 
     /*トロフィー画面のUI*/
     public Image trophyScreen;
@@ -86,8 +86,8 @@ public class ScreenUIManager : MonoBehaviour
 
             /*デバッグ用*/
             PlayerPrefs.SetInt("Course1".ToString(), 0);
-            for (int i = 1; i < theNumberOfCourses; i++) {
-                /*49コースをクリア済みにしておく*/
+            for (int i = 1; i <= 15; i++) {
+                /*15コースをクリア済みにしておく*/
                 PlayerPrefs.SetInt("Course" + (i + 1).ToString(), 1);
             }
 
@@ -200,7 +200,7 @@ public class ScreenUIManager : MonoBehaviour
         wallPanel.gameObject.SetActive(false);
         collectPanel.gameObject.SetActive(false);
         distanceDisplayPanel.gameObject.SetActive(false);
-        minimapPanel.gameObject.SetActive(false);
+        //minimapPanel.gameObject.SetActive(false);
         ogrePanel.gameObject.SetActive(false);
 
         admob.ShowBanner();
@@ -471,7 +471,7 @@ public class ScreenUIManager : MonoBehaviour
         }
         else if (courseNumber == 44) {
             explanationText.text = "青鬼ト\n呼吸ヲ\n合ワセロ.";
-            starText.text = "★★★★★";
+            starText.text = "★★★";
         }
         else if (courseNumber == 45) {
             explanationText.text = "青鬼ト一緒ニ\n回ロウ.";
@@ -516,7 +516,7 @@ public class ScreenUIManager : MonoBehaviour
         wallPanel.gameObject.SetActive(false);
         collectPanel.gameObject.SetActive(false);
         distanceDisplayPanel.gameObject.SetActive(false);
-        minimapPanel.gameObject.SetActive(false);
+        //minimapPanel.gameObject.SetActive(false);
         ogrePanel.gameObject.SetActive(false);
 
         tutorialTitleText.text = text; //説明テキストのタイトルを表示する
@@ -545,9 +545,9 @@ public class ScreenUIManager : MonoBehaviour
         else if (text == "脱出口までの直線距離") {
             distanceDisplayPanel.gameObject.SetActive(true);
         }
-        else if (text == "マップ") {
-            minimapPanel.gameObject.SetActive(true);
-        }
+        //else if (text == "マップ") {
+        //    minimapPanel.gameObject.SetActive(true);
+        //}
         else if (text == "鬼") {
             ogrePanel.gameObject.SetActive(true);
         }
@@ -743,8 +743,8 @@ public class ScreenUIManager : MonoBehaviour
         button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
         button.transform.GetChild(0).GetComponent<Text>().text = "脱出口までの直線距離";
 
-        button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
-        button.transform.GetChild(0).GetComponent<Text>().text = "マップ";
+        //button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
+        //button.transform.GetChild(0).GetComponent<Text>().text = "マップ";
 
         button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
         button.transform.GetChild(0).GetComponent<Text>().text = "鬼";
@@ -870,7 +870,7 @@ public class ScreenUIManager : MonoBehaviour
             message.Append(clearText.text).Append("！\n").Append(sentenceText.text).Append("\n\n");
         }
         message.Append("Android: play.google.com/store/apps/details?id=com.Mikoshi.Onikimi\n\n");
-        message.Append("iOS: apps.apple.com/jp/app/%e9%ac%bc%e3%83%8f%e8%bf%bd%e3%82%a4%e3%82%ab%e3%82%b1%e5%90%9b%e3%83%8f%e9%80%83%e3%82%b2%e3%83%ab/id1529844082");
+        message.Append("iOS: apps.apple.com/jp/app/id1529844082");
 
         string imgPath = "";
 

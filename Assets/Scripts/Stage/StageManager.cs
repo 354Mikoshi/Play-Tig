@@ -860,7 +860,7 @@ public class StageManager : MonoBehaviour
         CreateOneOgre(blueOgre, 2, 0, 6, Direction.PositiveX, b);
         CreateOneOgre(blueOgre, 4, 0, 6, Direction.NegativeZ, b);
         CreateOneOgre(blueOgre, 2, 0, 4, Direction.PositiveZ, b);
-        CreateOneOgre(blueOgre, 4, 0, 4, Direction.NegativeX, b);
+        //CreateOneOgre(blueOgre, 4, 0, 4, Direction.NegativeX, b);
 
         for (int i = 0; i < 12; i++) {
             if (i == 2 || i == 5 || i == 8 || i == 11) {

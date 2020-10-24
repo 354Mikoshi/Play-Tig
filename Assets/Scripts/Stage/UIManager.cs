@@ -13,13 +13,13 @@ public class UIManager : MonoBehaviour
     public Text gameOverText, backText, retryText;
 
     /*リワード広告を見る画面にあるオブジェクト*/
-    public Image watchRewardVideoImage;
+    //public Image watchRewardVideoImage;
 
     /*戻る矢印のボタン*/
     public Image backArrowImage;
 
     /*ミニマップの画像*/
-    public RawImage minimap;
+    //public RawImage minimap;
 
     /*フリックの情報を受け取るためのImage*/
     public Image flickImage1, flickImage2;
@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour
         retryBackgroundImage.gameObject.SetActive(false);
 
         /*リワード広告を見るための画面*/
-        watchRewardVideoImage.gameObject.SetActive(false);
+        //watchRewardVideoImage.gameObject.SetActive(false);
 
         /*リワード広告の読み込みに失敗したテキスト*/
         loadFailedText.gameObject.SetActive(false);
@@ -235,7 +235,7 @@ public class UIManager : MonoBehaviour
     public void CloseWholeMap() {
         wholeMap.gameObject.SetActive(false);
         wholeMapCamera.gameObject.SetActive(false);
-        watchRewardVideoImage.gameObject.SetActive(false);
+        //watchRewardVideoImage.gameObject.SetActive(false);
         loadFailedText.gameObject.SetActive(false);
         stageManager.MakeOgresActive(true); //鬼を表示する
 
@@ -248,14 +248,14 @@ public class UIManager : MonoBehaviour
         if (IS_GOING_ON) {
             flickImage1.gameObject.SetActive(false);
             flickImage2.gameObject.SetActive(false);
-            watchRewardVideoImage.gameObject.SetActive(true);
+            //watchRewardVideoImage.gameObject.SetActive(true);
         }
     }
 
     /*リワード広告を見るか聞くパネルを閉じる*/
     public void CloseWatchRewardVideoScreen() {
         audioSource.PlayOneShot(mouseClickSound);
-        watchRewardVideoImage.gameObject.SetActive(false);
+        //watchRewardVideoImage.gameObject.SetActive(false);
         flickImage1.gameObject.SetActive(true);
         flickImage2.gameObject.SetActive(true);
     }
@@ -297,7 +297,7 @@ public class UIManager : MonoBehaviour
         if (IS_GOING_ON) {
             IS_GOING_ON = false;
             backArrowImage.raycastTarget = false;
-            minimap.raycastTarget = false;
+            //minimap.raycastTarget = false;
             clearBeltImage.gameObject.SetActive(true);
             audioSource.PlayOneShot(clearSound);
             stageManager.RecordClearCourseNumber(); //クリアしたことを保存する
