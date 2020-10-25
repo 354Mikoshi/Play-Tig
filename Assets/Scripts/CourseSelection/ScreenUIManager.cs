@@ -28,7 +28,7 @@ public class ScreenUIManager : MonoBehaviour
     public RectTransform tutorialContentRectTransform; //ボタンを配置するための長方形領域
     public Text tutorialTitleText;
     public GameObject rulePanel, howToMovePanel, stairPanel, itemStoragePanel, bridgePanel, wallPanel,
-        collectPanel, distanceDisplayPanel/*, minimapPanel*/, ogrePanel;
+        collectPanel, distanceDisplayPanel, minimapPanel, ogrePanel;
 
     /*トロフィー画面のUI*/
     public Image trophyScreen;
@@ -85,11 +85,11 @@ public class ScreenUIManager : MonoBehaviour
             moviePlay = false;
 
             /*デバッグ用*/
-            PlayerPrefs.SetInt("Course1".ToString(), 0);
-            for (int i = 1; i <= 15; i++) {
-                /*15コースをクリア済みにしておく*/
-                PlayerPrefs.SetInt("Course" + (i + 1).ToString(), 1);
-            }
+            //PlayerPrefs.SetInt("Course1".ToString(), 0);
+            //for (int i = 1; i <= 15; i++) {
+            //    /*15コースをクリア済みにしておく*/
+            //    PlayerPrefs.SetInt("Course" + (i + 1).ToString(), 1);
+            //}
 
         }
         else {
@@ -200,7 +200,7 @@ public class ScreenUIManager : MonoBehaviour
         wallPanel.gameObject.SetActive(false);
         collectPanel.gameObject.SetActive(false);
         distanceDisplayPanel.gameObject.SetActive(false);
-        //minimapPanel.gameObject.SetActive(false);
+        minimapPanel.gameObject.SetActive(false);
         ogrePanel.gameObject.SetActive(false);
 
         admob.ShowBanner();
@@ -516,7 +516,7 @@ public class ScreenUIManager : MonoBehaviour
         wallPanel.gameObject.SetActive(false);
         collectPanel.gameObject.SetActive(false);
         distanceDisplayPanel.gameObject.SetActive(false);
-        //minimapPanel.gameObject.SetActive(false);
+        minimapPanel.gameObject.SetActive(false);
         ogrePanel.gameObject.SetActive(false);
 
         tutorialTitleText.text = text; //説明テキストのタイトルを表示する
@@ -545,9 +545,9 @@ public class ScreenUIManager : MonoBehaviour
         else if (text == "脱出口までの直線距離") {
             distanceDisplayPanel.gameObject.SetActive(true);
         }
-        //else if (text == "マップ") {
-        //    minimapPanel.gameObject.SetActive(true);
-        //}
+        else if (text == "マップ") {
+            minimapPanel.gameObject.SetActive(true);
+        }
         else if (text == "鬼") {
             ogrePanel.gameObject.SetActive(true);
         }
@@ -743,8 +743,8 @@ public class ScreenUIManager : MonoBehaviour
         button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
         button.transform.GetChild(0).GetComponent<Text>().text = "脱出口までの直線距離";
 
-        //button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
-        //button.transform.GetChild(0).GetComponent<Text>().text = "マップ";
+        button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
+        button.transform.GetChild(0).GetComponent<Text>().text = "マップ";
 
         button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
         button.transform.GetChild(0).GetComponent<Text>().text = "鬼";
