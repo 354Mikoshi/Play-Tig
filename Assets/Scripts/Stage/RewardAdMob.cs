@@ -28,7 +28,7 @@ public class RewardAdMob : MonoBehaviour
 
     public void CreateAndLoadRewardedAd() {
         // 本番用
-        /*
+        
         #if UNITY_ANDROID
             string adUnitId = "ca-app-pub-5831891803553766/3121044321";
         #elif UNITY_IPHONE
@@ -36,10 +36,10 @@ public class RewardAdMob : MonoBehaviour
         #else
             string adUnitId = "unexpected_platform";
         #endif
-        */
+        
 
         // テスト用
-        
+        /*
 #if UNITY_ANDROID
         string adUnitId = "ca-app-pub-3940256099942544/5224354917";
 #elif UNITY_IPHONE
@@ -47,7 +47,7 @@ public class RewardAdMob : MonoBehaviour
 #else
             string adUnitId = "unexpected_platform";
 #endif
-        
+        */
 
         this.rewardedAd = new RewardedAd(adUnitId);
 
