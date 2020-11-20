@@ -35,33 +35,33 @@ public class ScreenUIManager : MonoBehaviour
     public Text clearText, sentenceText, numberText;
 
     /*アプリ起動時に流れる動画*/
-    private VideoPlayer videoPlayer;
+    protected VideoPlayer videoPlayer;
     public Image initialMovieBackground;
     public RawImage initialMovie;
-    private static bool moviePlay = true; //コースから戻ってきたとき
+    protected static bool moviePlay = true; //コースから戻ってきたとき
 
     /*BGM*/
-    private AudioSource BGM;
+    protected AudioSource BGM;
 
     /*エンディングのUI*/
     public Image finalMessageImage;
     public Text finalMessageText;
 
-    private const int theNumberOfCourses = 50; //コースの数
-    private int clearedCourses; //クリア済みのコースの数
+    protected const int theNumberOfCourses = 50; //コースの数
+    protected int clearedCourses; //クリア済みのコースの数
     public static int courseNumber; //コース番号
-    private GameObject[] courseButtons; //コースボタン(クリア済みのコースの右上にチェックマークを出すときに必要)
+    protected GameObject[] courseButtons; //コースボタン(クリア済みのコースの右上にチェックマークを出すときに必要)
 
-    private AudioSource audioSource;
-    private AdMob admob;
-    private static bool admobBannerExist;
-    private bool canFinishEnding; //trueだったらエンディングを終了できる
+    protected AudioSource audioSource;
+    protected AdMob admob;
+    protected static bool admobBannerExist;
+    protected bool canFinishEnding; //trueだったらエンディングを終了できる
     public static bool canClick; //「行く」ボタンを押した瞬間にfalseになり、画面のボタンを押せなくなる
 
-    private enum Screen { title, courseSelection, tutorial, setting }
-    private static Screen lastScreen;
+    protected enum Screen { title, courseSelection, tutorial, setting }
+    protected static Screen lastScreen;
 
-    void Start() {
+    protected void Start() {
         audioSource = GetComponent<AudioSource>();
         admob = GameObject.Find("AdMob").GetComponent<AdMob>();
         videoPlayer = GameObject.Find("Video Player").GetComponent<VideoPlayer>();
@@ -102,7 +102,7 @@ public class ScreenUIManager : MonoBehaviour
         Initialize();
     }
 
-    private void Initialize() {
+    protected void Initialize() {
         CreateButtons();
         CreateTutorialButtons();
         trophyScreen.gameObject.SetActive(false); //トロフィー画面を一旦非表示にする
@@ -322,7 +322,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*説明テキストと星の数のテキストを更新する*/
-    public void SetExplainingCourseTexts(int courseNumber) {
+    public virtual void SetExplainingCourseTexts(int courseNumber) {
         difficultyText.gameObject.SetActive(true);
         proceedButton.gameObject.SetActive(true);
         courseText.gameObject.SetActive(true);
@@ -505,7 +505,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*チュートリアル画面でボタンを押すと、対応する説明文が表示される*/
-    public void SetExplainingTutorialTexts(string text) {
+    public virtual void SetExplainingTutorialTexts(string text) {
 
         /*一旦すべての説明テキストを非アクティブにする*/
         rulePanel.gameObject.SetActive(false);
@@ -574,7 +574,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*コースを選択するボタンを生成する*/
-    private void CreateButtons() {
+    protected void CreateButtons() {
         for (int i = 0; i < theNumberOfCourses; i++) {
             courseButtons[i] = Instantiate(buttonPrototype, contentRectTransform);
             courseButtons[i].gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = (i + 1).ToString(); //コース番号を入力
@@ -596,7 +596,7 @@ public class ScreenUIManager : MonoBehaviour
 
     /*トロフィー画面を表示させる*/
     /*showTrophyという変数をローカルに保存しておき、showTrophy==0ならトロフィー画面を映し、showTrophy==1なら映さない*/
-    private void DisplayTrophyScreen() {
+    protected virtual void DisplayTrophyScreen() {
         if (clearedCourses == 1) {
             if (PlayerPrefs.GetInt("showTrophy", 0) == 0) {
                 trophyScreen.gameObject.SetActive(true);
@@ -718,7 +718,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*チュートリアル左画面のボタンを生成する*/
-    private void CreateTutorialButtons() {
+    protected virtual void CreateTutorialButtons() {
         GameObject button = Instantiate(tutorialButtonPrefab, tutorialContentRectTransform);
         button.transform.GetChild(0).GetComponent<Text>().text = "ルール";
 
@@ -756,7 +756,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*ユーザーにレビューを要請する*/
-    private void RequestReview() {
+    protected void RequestReview() {
 
         #if UNITY_ANDROID
             reviewScreen.gameObject.SetActive(true);
@@ -781,7 +781,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*オープニング動画を再生する*/
-    private IEnumerator StartOpeningMovie() {
+    protected IEnumerator StartOpeningMovie() {
         admob.HideBanner();
         //initialMovie.GetComponent<RawImage>().color = new Color(1f, 1f, 1f, 1f);
         BGM.mute = true; //動画が流れている間はBGMをミュートにする
@@ -814,7 +814,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*動画をフェードアウトさせる*/
-    private IEnumerator FadeOutMovie() {
+    protected IEnumerator FadeOutMovie() {
         for (float value = 1f; value >= 0f; value -= 0.1f) {
             initialMovie.GetComponent<RawImage>().color = new Color(value, value, value, 1f);
             yield return new WaitForSeconds(0.05f);
@@ -833,7 +833,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*エンディングのメッセージを流す*/
-    private IEnumerator ShowFinalMessages() {
+    protected IEnumerator ShowFinalMessages() {
 
         admob.HideBanner();
         BGM.mute = true;
@@ -862,7 +862,7 @@ public class ScreenUIManager : MonoBehaviour
     }
 
     /*SNSでアプリを共有するためのコルーチン*/
-    private IEnumerator TrySharingWithSNS(string imgName) {
+    protected IEnumerator TrySharingWithSNS(string imgName) {
 
         StringBuilder message = new StringBuilder("【スマホゲーム】\n#鬼ハ追イカケ君ハ逃ゲル\n\n", 140);
         message.Append("さあ、あなたも鬼と戯れながら密閉空間から脱出しよう。\n\n");
@@ -889,7 +889,7 @@ public class ScreenUIManager : MonoBehaviour
         yield break;
     }
 
-    private IEnumerator DelayMethod(float waitTime, Action action) {
+    protected IEnumerator DelayMethod(float waitTime, Action action) {
         yield return new WaitForSeconds(waitTime);
         action();
     }
