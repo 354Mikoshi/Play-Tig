@@ -22,7 +22,7 @@ public class AdMob : MonoBehaviour
     public void RequestBanner() {
 
         // 本番用
-        /*
+        
         #if UNITY_ANDROID
             string adUnitId = "ca-app-pub-5831891803553766/5391984444";
         #elif UNITY_IPHONE
@@ -30,10 +30,10 @@ public class AdMob : MonoBehaviour
         #else
             string adUnitId = "unexpected_platform";
         #endif
-        */
+        
 
         //テスト用
-        
+        /*
         #if UNITY_ANDROID
             string adUnitId = "ca-app-pub-3940256099942544/6300978111";
         #elif UNITY_IPHONE
@@ -41,7 +41,7 @@ public class AdMob : MonoBehaviour
         #else
             string adUnitId = "unexpected_platform";
         #endif
-        
+        */
 
         // Create a 320x50 banner at the top of the screen.
         this.bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);

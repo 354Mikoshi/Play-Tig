@@ -28,7 +28,7 @@ public class InterstitialAdMob : MonoBehaviour
     private void RequestInterstitial() {
 
         // 本番用
-        /*
+        
         #if UNITY_ANDROID
             string adUnitId = "ca-app-pub-5831891803553766/7635004402";
         #elif UNITY_IPHONE
@@ -36,10 +36,10 @@ public class InterstitialAdMob : MonoBehaviour
         #else
             string adUnitId = "unexpected_platform";
         #endif
-        */
+        
 
         // テスト用
-        
+        /*
 #if UNITY_ANDROID
         string adUnitId = "ca-app-pub-3940256099942544/1033173712";
 #elif UNITY_IPHONE
@@ -47,7 +47,7 @@ public class InterstitialAdMob : MonoBehaviour
 #else
             string adUnitId = "unexpected_platform";
 #endif
-        
+        */
 
 
         // Initialize an InterstitialAd.
