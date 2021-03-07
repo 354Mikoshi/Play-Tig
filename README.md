@@ -11,6 +11,8 @@ Android版：https://play.google.com/store/apps/com.Mikoshi.Onikimi
 ## Assets
 ## BlenderProjects
 Blenderのファイルや、レンダリング済みの画像が入っています。
+## Documents
+ゲームを作る際に新たに学んだ知識などをメモしています。
 ## ImageFactory
 ゲーム内で使用した画像を描いたClip Studio PaintやPhotoshopファイルがあります。
 ## Promotion
